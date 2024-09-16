@@ -1,7 +1,6 @@
-use ndarray::array;
+use arrow::{array::Int32Array, compute::sum};
 
 fn main() {
-    let a1 = array![1, 2, 3, 4];
-
-    println!("{}", a1)
+    let data = Int32Array::from_iter(0..100);
+    println!("{:?}", data)
 }
